@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Имя / Компания — Визитка</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#0ea5a3;--muted:#9aa3b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef6;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:880px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;padding:32px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    header{display:flex;gap:20px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#7dd3d5);color:#022; font-weight:700}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:8px 0 16px;color:var(--muted)}
+    .contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;color:inherit;font-weight:600;display:inline-flex;gap:10px;align-items:center}
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem}
+    @media (max-width:520px){.card{padding:20px}.logo{width:56px;height:56px}.contacts{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <header>
+      <div class="logo">VG</div>
+      <div>
+        <h1>Вася Петров — звукорежиссёр / услуги</h1>
+        <p class="lead">Короткое описание: подготовка звука для мероприятий, аренда оборудования, запись.</p>
+        <div class="contacts">
+          <a class="btn" href="tel:+380501234567">📞 +38 050 123-45-67</a>
+          <a class="btn" href="mailto:vasya@example.com">✉ vasya@example.com</a>
+          <a class="btn" href="https://t.me/vasya" target="_blank" rel="noopener">💬 Telegram</a>
+          <a class="btn" href="https://instagram.com/vasya" target="_blank" rel="noopener">📷 Instagram</a>
+        </div>
+      </div>
+    </header>
+
+    <section style="margin-top:18px">
+      <h3 style="margin:0 0 8px">Услуги</h3>
+      <ul style="margin:0 0 10px 18px;color:var(--muted)">
+        <li>Звук для концертов и мероприятий</li>
+        <li>Аренда микрофонов и колонок</li>
+        <li>Студийная запись и монтаж</li>
+      </ul>
+      <p style="margin:0;color:var(--muted)">Если нужно — могу прислать прайс в мессенджер или составить счёт. </p>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> Вася Пупкин — сайт-визитка</small>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
